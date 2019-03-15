@@ -5,6 +5,6 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
     echo '%node ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
     chown -R node:node . /nodejs-hello-app
 USER node
-COPY --chown=node:node ./nodejs-hello-app/ ./
-RUN node server.js
-
+COPY --chown=node:node . /nodejs-hello-app
+EXPOSE 8080
+ENTRYPOINT [ "node", "server.js" ]

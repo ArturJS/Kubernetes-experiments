@@ -5,6 +5,6 @@ const server = http.createServer((req, res) => {
   res.end('Hello from NodeJS');
 });
 
-server.listen(1234, () => {
-  console.log('NodeJS server is up and running on 1234 port. Enjoy!');
+server.listen(8080, () => {
+  console.log('NodeJS server is up and running on 8080 port. Enjoy!');
 });
